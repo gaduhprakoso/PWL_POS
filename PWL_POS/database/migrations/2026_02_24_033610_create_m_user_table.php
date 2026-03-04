@@ -4,7 +4,8 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration {
+return new class extends Migration
+{
     /**
      * Run the migrations.
      */
@@ -19,7 +20,6 @@ return new class extends Migration {
             $table->timestamps();
 
             // Mendefinisikan Foreign Key pada kolom level_id mengacu pada kolom level_id di tabel m_level
-            // File: database/migrations/xxxx_create_m_user_table.php
             $table->foreign('level_id')->references('level_id')->on('m_level');
         });
     }
